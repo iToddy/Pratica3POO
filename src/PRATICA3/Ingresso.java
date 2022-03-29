@@ -2,7 +2,7 @@ package PRATICA3;
 
 public class Ingresso {
 
-		double price;
+		double price = 100;
 
 		public Ingresso(double price) {
 			super();
