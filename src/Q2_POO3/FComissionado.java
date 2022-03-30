@@ -11,7 +11,7 @@ public class FComissionado extends Funcionario {
 		this.productionNull = productionNull;
 	}
 	
-	public double calcularProventosComissionado(){
+	public double calcularProventos(){
 		return salary + (commissionMonths * commision) +(productionNull * production);
 	}
 

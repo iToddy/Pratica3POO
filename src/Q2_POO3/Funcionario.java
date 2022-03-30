@@ -1,12 +1,12 @@
 package Q2_POO3;
 
-public class Funcionario {
+public abstract class Funcionario {
 
-	int matricula;
-	String name;
-	double salary;
-	int commision = 100;
-	int production = 60;
+	public int matricula;
+	public String name;
+	public double salary;
+	public int commision = 100;
+	public int production = 60;
 
 	public Funcionario(int matricula, String name, double salary) {
 		super();
@@ -15,13 +15,13 @@ public class Funcionario {
 		this.salary = salary;
 	}
 	
-	public double calcularProventos(){
-		return salary + commision + production;
-	}
+	public abstract double calcularProventos();
+		
+	
 	
 	
 	public String toString(){
-		System.out.printf("Valor a receber " + calcularProventos());
+		return "Valor a receber " + calcularProventos();
 	}
 
 	public int getMatricula() {

@@ -16,58 +16,68 @@ public class MainFuncionario {
 		
 		case 1:
 			
-			System.out.println("Qual o seu nome");
+			System.out.println("Qual a sua matrícula");
 			int matricula = entrada.nextInt();
 			
 			System.out.println("Qual o seu nome");
 			String name = entrada.next();
 			
-			System.out.println("Qual o seu nome");
+			System.out.println("Qual o seu salário");
 			double salary = entrada.nextDouble();
 					
 			FPadrao F1 = new FPadrao(matricula, name, salary);
 			
-			FPadrao.calcularProventosPadrao();
+			F1.calcularProventos();
+			
+			System.out.println(F1.toString());
 			
 			break;
 			
 		case 2: 
 			
 			System.out.println("Qual o seu nome");
-			int matricula = entrada.nextInt();
+			 matricula = entrada.nextInt();
 			
 			System.out.println("Qual o seu nome");
-			String name = entrada.next();
+			name = entrada.next();
 			
-			System.out.println("Qual o seu nome");
-			double salary = entrada.nextDouble();
+			System.out.println("Qual o seu salário");
+			salary = entrada.nextDouble();
 			
 			System.out.println("Quantos produtos você vendeu? ");
 			int commissionMonths = entrada.nextInt();
 			
-			FComissionado F1 = new FComissionado (matricula, name, salary, commissionMonths, productionNull);
+			int productionNull = 0;
 			
-			FComissionado.calcularProventosComissionado();
+			FComissionado FC1 = new FComissionado (matricula, name, salary, commissionMonths, productionNull);
+			
+			FC1.calcularProventos();
+			
+			System.out.println(FC1.toString());
 			
 			break;
 			
 		case 3: 
 			
 			System.out.println("Qual o seu nome");
-			int matricula = entrada.nextInt();
+			matricula = entrada.nextInt();
 			
 			System.out.println("Qual o seu nome");
-			String name = entrada.next();
+			 name = entrada.next();
 			
 			System.out.println("Qual o seu nome");
-			double salary = entrada.nextDouble();
+			salary = entrada.nextDouble();
 			
 			System.out.println("Quantas unidade de produtos você produziu? ");
 			int produtionMonths = entrada.nextInt();
 			
-			FProdutividade F1 = new FProdutividade(matricula, name, salary, commitionNull, produtionMonths);
+			int commissionNull = 0;
 			
-			FProdutividade.calcularProventosProdutividade();
+			FProdutividade FP1 = new FProdutividade(matricula, name, salary, commissionNull, produtionMonths);
+			
+			FP1.calcularProventos();
+			
+			System.out.println(FP1.toString());
 			
 			break;
 			

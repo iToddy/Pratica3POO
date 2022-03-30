@@ -2,25 +2,25 @@ package Q2_POO3;
 
 public class FProdutividade extends Funcionario {
 
-		int commitionNull = 0;
-		int produtionMonths;
+		private int commissionNull = 0;
+		private int produtionMonths;
 		
 		
 		public FProdutividade (int matricula, String name, double salary, int commitionNull, int produtionMonths) {
 			super(matricula, name, salary);
-			this.commitionNull = commitionNull;
+			this.commissionNull = commitionNull;
 			this.produtionMonths = produtionMonths;
 		} 
 		
-		public double calcularProventosProdutividade(){
-			return salary + (commitionNull * commision) +(produtionMonths * production);
+		public double calcularProventos(){
+			return salary + (commissionNull * commision) +(produtionMonths * production);
 		}
 		public int getCommitionNull() {
-			return commitionNull;
+			return commissionNull;
 		}
 
 		public void setCommitionNull(int commitionNull) {
-			this.commitionNull = commitionNull;
+			this.commissionNull = commitionNull;
 		}
 
 		public int getProdutionMonths() {

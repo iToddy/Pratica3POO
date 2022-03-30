@@ -13,7 +13,7 @@ public class FPadrao extends Funcionario {
 
 	}
 
-	public double calcularProventosPadrao(){
+	public double calcularProventos(){
 		return salary + (commissionDefaut * commision) +(poductionDefaut * production);
 	}
 

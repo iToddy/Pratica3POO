@@ -27,9 +27,11 @@ public class Q1_Ingresso {
 		case 2:
 			
 			System.out.println("Qual o valor do ingresso");
-			double price = entrada.nextDouble();
+			price = entrada.nextDouble();
 			
-			Ingresso_VIP ticketVIP = new Ingresso_VIP(price);
+			double addValor = price + 70;
+			
+			Ingresso_VIP ticketVIP = new Ingresso_VIP(price, addValor);
 	
 			ticketVIP.getVIP();
 			
@@ -38,13 +40,15 @@ public class Q1_Ingresso {
 		case 3: 
 			
 			System.out.println("Qual o valor do ingresso");
-			double price = entrada.nextDouble();
+			price = entrada.nextDouble();
 			
 			
 			System.out.println("Qual o setor do ingresso");
 			String local = entrada.next();
 			
-			Ingresso_Camarote ticketCam = new Ingresso_Camarote(price, local);
+			double addValor2 = price + 100;
+			
+			Ingresso_Camarote ticketCam = new Ingresso_Camarote(price, addValor2, local);
 			
 			ticketCam.getCAM();
 			
