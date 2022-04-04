@@ -1,2 +1,3 @@
-module Pratica3 {
+module Exemplos_GUI {
+requires java.desktop;
 }
