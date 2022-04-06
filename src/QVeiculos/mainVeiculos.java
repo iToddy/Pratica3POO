@@ -1,30 +1,27 @@
 package QVeiculos;
 
 import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
 
-import java.util.Scanner;
 
 public class mainVeiculos {
 
 	public static void main(String[] args) {
 		
-		int option = Integer.parseInt(JOptionPane.showInputDialog("Qual a classe do veículo " /n + "1: Onibus" /n  + "2: Caminhão" /n "3: Veículo comum"));
+		int option = Integer.parseInt(JOptionPane.showInputDialog("Qual a classe do veículo  1: Onibus  + 2: Caminhão 3: Veículo comum"));
 		
 		while (option <= 3) {
 		
 		switch (option) {
 		
 			case 1: 
-				System.out.print(("Qual a placa do conibus?");
-				String plaque = entrada.next();
+				String plaque = JOptionPane.showInputDialog("Digite a placa do ônibus: ");
 				
-				System.out.print(("Qual o ano do onibus?");
-				int year = entrada.nextInt();
+				int year = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano do ônibus: "));
 				
-				System.out.print(("Qual o número de assentos do onibus?");
-				int sits = entrada.nextInt();
+				int sits = Integer.parseInt(JOptionPane.showInputDialog("Digite o número de assentos do ônibus: "));
 				
-				Onibus O1 = new Onibus; 
+				Onibus O1 = new Onibus(plaque, year,sits); 
 				
 				O1.exibirDados();
 				
@@ -32,37 +29,32 @@ public class mainVeiculos {
 				
 				case 2: 
 					
-					System.out.print(("Qual a placa do caminhão?");
-					String plaque = entrada.next();
+					String plaqueC = JOptionPane.showInputDialog("Digite a placa do caminhão: ");
 					
-					System.out.print(("Qual o ano do caminhão?");
-					int year = entrada.nextInt();
+					int yearC = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano do caminhão: "));
 					
-					System.out.print(("Qual o número de eixos do caminhão?");
-					int eixos = entrada.nextInt();
+					int eixos = Integer.parseInt(JOptionPane.showInputDialog("Digite o número de eixos do caminhão: "));
 					
-					Caminhao C1 = new Caminhao; 
+					Caminhao C1 = new Caminhao(plaqueC, yearC, eixos); 
 					
 					C1.exibirDados();
 					
 					break;
 					
 				case 3: 
-					System.out.print(("Qual a placa do caminhão?");
-					String plaque = entrada.next();
+					String plaqueV = JOptionPane.showInputDialog("Digite a placa do veículo: ");
 					
-					System.out.print(("Qual o ano do caminhão?");
-					int year = entrada.nextInt();
+					int yearV = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano do veículo: "));
 					
-					Veiculo V1 = new Veiculo; 
+					Veiculos V1 = new Veiculos(plaqueV, yearV); 
 					
 					V1.exibirDados();
 					
 					break;
 				
-				default
+				default:
 				
-				JOptionPane.showMessageDialog(null,  "Dados insediros incorretamente, tente novamente","ERRO", 
+				JOptionPane.showMessageDialog(null, "Dados insediros incorretamente, tente novamente","ERRO", 
 						JOptionPane.ERROR_MESSAGE);
 					
 					
@@ -71,7 +63,7 @@ public class mainVeiculos {
 
 	}
 	
-		JOptionPane.showInputDialog("Qual a classe do veículo " /n + "1: Onibus" /n  + "2: Caminhão" /n "3: Veículo comum");
+		JOptionPane.showInputDialog("Qual a classe do veículo 1: Onibus 2: Caminhão 3: Veículo comum");
 
 	}
 

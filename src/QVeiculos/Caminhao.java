@@ -1,5 +1,8 @@
 package QVeiculos;
 
+import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
+
 public class Caminhao extends Veiculos {
 	
 	int eixos;
@@ -23,7 +26,7 @@ public class Caminhao extends Veiculos {
 	} 
 	
 	public void exibirDados() {
-		JOptionPane.showMessageDialog(null, "Dados do veículo" /n + "Placa :" + plaque + /n "Ano:" + year + /n ,"Mensagem", 
+		JOptionPane.showMessageDialog(null, "Dados do veículo Placa : Ano:" + plaque + year ,"Mensagem", 
 				JOptionPane.INFORMATION_MESSAGE);
 		
 		JOptionPane.showMessageDialog(null, "Eixos" + eixos,"Mensagem", 

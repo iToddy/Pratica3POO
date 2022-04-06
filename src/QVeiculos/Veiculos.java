@@ -1,5 +1,8 @@
 package QVeiculos;
 
+import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
+
 public class Veiculos {
 	
 	String plaque;
@@ -27,7 +30,7 @@ public class Veiculos {
 	}
 	
 	public void exibirDados() {
-		JOptionPane.showMessageDialog(null, "Dados do veículo" /n + "Placa :" + plaque,"Mensagem", 
+		JOptionPane.showMessageDialog(null, "Dados do veículo Placa :" + plaque + year,"Mensagem", 
 				JOptionPane.INFORMATION_MESSAGE);
 	}
 
